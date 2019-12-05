@@ -1,0 +1,10 @@
+.responsive-circle {
+  position: relative;
+  display: inline-block;
+  width: 10vw;
+  height: 10vw;
+  padding: 25% 0;
+  border-radius: 50%;
+  text-align: center;
+   background: #38a9e4;
+}
