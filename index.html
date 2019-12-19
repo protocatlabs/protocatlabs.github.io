@@ -23,13 +23,14 @@
   	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
   	<link rel="stylesheet" href='css/main.css' >
   	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   	<!-- Load font awesome icons -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
 
   <!-- JS
   	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  	<script src="js/client.js"></script>
+  	
 
   <!-- Favicon
   	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -68,15 +69,89 @@
   </div> 
 </header>
 
-<section class="sans-serif white bg-dark-gray"> 
-  <div class="ph4 f2 f2-l fw2 mb3 mt4 mt0-ns pt3">Request a Quote 
-  </div>
 
 </section>
 
 <section class="sans-serif"> 
-  <div class="ph4 f2 f2-l fw2 mb3 mt4 mt0-ns pt3">How it Works 
+  <div class="ph4 f2 f2-l fw2 mb3 mt4 mt0-ns pt3">How we work 
   </div>
+
+  <main class="pa4 black-80">
+  <form class="measure center" action="https://formsubmit.co/pj@protocatlabs.com" method="POST">
+    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+      <legend class="f4 fw6 ph0 mh0">Step 1: Fill out the following form</legend>
+      <div class="measure mt3">
+        <label for="question" class="f6 b db mb2">Your Problem / Question <span class="normal black-60"></span></label>
+        <textarea name = "question" id="question" class="input-reset ba b--black-20 pa2 mb2 db w-100" placeholder = "Example: Is there a way to remotely monitor the mental health of my patients?"></textarea>
+        <small id="question-desc" class="f6 black-60 db mb2">See the examples below for inspiration</small>
+      </div>
+      <div class="measure mt3">
+        <label for="question" class="f6 b db mb2">Long description of your problem <span class="normal black-60"></span></label>
+        <textarea name = "description" id="question" rows = "10" class="input-reset ba b--black-20 pa2 mb2 db w-100" placeholder = "Example: When our patients come in for therapy, they are often recollecting their past feelings which are not as accurate as their feelings at the time. We would like to develop a methodology, such as an app, which can allow our patients to give feedback multiple times per day."></textarea>
+        <small id="question-desc" class="f6 black-60 db mb2"></small>
+      </div>
+      <div class="measure mt3 bn">
+        <!-- Trigger/Open The Modal -->
+        <label id="morePayInfo" for="question" class="f6 b db mb2">How would you like to pay <span class="normal black-60"> (click for more info)</span></label>
+        <div class="flex items-center mb2">
+          <input name="payment" class="mr2" type="checkbox" id="hocuspocus" value="hocuspocus">
+          <label for="hocuspocus" class="lh-copy">Cash <span class="normal black-60">(Recommended)</span></label>
+        </div>
+        <div class="flex items-center mb2">
+          <input name="payment" class="mr2" type="checkbox" id="diehard" value="diehard">
+          <label for="diehard" class="lh-copy">Equity</label>
+        </div>
+        <div class="flex items-center mb2">
+          <input name="payment" class="mr2" type="checkbox" id="primer" value="primer">
+          <label for="primer" class="lh-copy">Co-Authored Research</label>
+        </div>
+        <div class="flex items-center mb2">
+          <input name="payment" class="mr2" type="checkbox" id="proxy" value="proxy">
+          <label for="proxy" class="lh-copy">Pats</label>
+        </div>
+      </div>
+
+      <div class="measure mt3">
+        <label for="email-address" class="f6 b db mb2">Your email <span class="normal black-60"></span></label>
+        <input name ="email" id="email-address" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email" ></input>
+        <small id="email-address-desc" class="f6 black-60 db mb2"></small>
+      </div>
+
+      <div class="measure mt3">
+        <label for="website" class="f6 b db mb2">Your Website <span class="normal black-60">(optional)</span></label>
+        <input name = "website" id="website" class="input-reset ba b--black-20 pa2 mb2 db w-100"></input>
+        <small id="website-desc" class="f6 black-60 db mb2"></small>
+      </div>
+
+    </fieldset>
+    <div class="">
+      <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Send">
+    </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class = "b">Cash</p>
+    <p>Cash payments are the standard recommended method, and will give your project the highest priority.</p>
+
+    <p class = "b">Equity</p>
+    <p>Payment in equity requires a business plan, and requires a longer negotiating process prior to starting the work. Recommended only for start-ups that are strapped for cash.</p>
+
+    <p class = "b">Research Co-Authorships</p>
+    <p>Can provide a discounted rate for resesarch institutions. Requires a research plan of the publication, and a list of targetted journals. </p>
+
+    <p class = "b">Pats</p>
+    <p>For poor social/environmental, not for profit orginisations only. Our team devotes one day per week for pro-bono work, and your project will have the lowest priority.</p>
+  </div>
+
+</div>
+  </form>
+</main>
+
+<script src="js/modal.js"></script>
 </section>
 
 <section class="sans-serif white bg-dark-gray"> 
@@ -86,16 +161,21 @@
     <div class="fl w-100 w-50-ns ph2">
       <div href="" class="pv2 grow db no-underline black">
 
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you design and build a kinetic photovoltaic shading system for a building?</div>
+        <div class = "absolute bg-black-80 white w-100 pa3"> Can you design and build a kinetic photovoltaic shading system?
+        </div>
         <img class="db w-100" src="img/asf.jpg">
       </div>
       <div href="" class="no-underline pv2 grow db">
 
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you conceptually design the best building research facility in the world?</div>
+        <div class = "absolute bg-black-80 white w-100 pa3"> Can you conceptually design a world leading research facility?</div>
         <img class="db w-100" src="img/ASL.png">
 
       </div>
-      <a href="#" class="no-underline pv2 grow db"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/pink-and-noseworthy-22.12.10-cargo_960.jpg"/></a>
+      <div class="no-underline pv2 grow db">
+
+        <div class = "absolute bg-black-80 white w-100 pa3"> It will take us a month to manually process 10'000 biomedical images</div>
+        <img class="db w-100" src="img/BioCloud.png"/>
+        </div>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw090911_960.jpg"></a>
     </div>
 
@@ -103,7 +183,9 @@
       <div class="pv2 grow db no-underline black">
          <div class = "absolute bg-black-80 white w-100 pa3"> Could a smart-watch be used for measuring human comfort?</div>
         <img class="db w-100" src="img/versa.png"></div>
-      <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg"></a>
+      <div href="" class="pv2 grow db no-underline black">
+        <div class = "absolute bg-black-80 white w-100 pa3"> Can you simulate the sun?</div>
+        <img class="db w-100" src="img/SolarSimulator.jpg"></div>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw18-240112-cc_960.jpg"> </a>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw-residency-cargo_960.jpg"></a>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/orchid-2-mnkr_960.jpg"></a>
@@ -115,12 +197,14 @@
     <div class="fl w-50 w-25-ns ph2">
       <div href="" class="pv2 grow db no-underline black">
 
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you represent our building data in a interactive 3d web model?</div>
+        <div class = "absolute bg-black-80 white w-100 pa3"> Can you represent our building IoT data in an interactive 3d web model?</div>
 
-        <img class="db w-100" src="img/forge.png">
+        <img class="db w-100" src="img/forge_long.png">
 
       </div>
-      <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="img/ASL.png"></a>
+      <div href="" class="pv2 grow db no-underline black">
+         <div class = "absolute bg-black-80 white w-100 pa3"> We need a high speed building simulation engine</div>
+        <img class="db w-100" src="img/RCModel.png"></div>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg"></a>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/cc-shanee_960.jpg"></a>
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/ZachHurd-190111s_960.jpg"></a>
@@ -128,6 +212,9 @@
       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/adam-stern-191110_960.jpg"></a>
     </div>
 </main>
+
+
+
 </section>
 
 <!-- 
