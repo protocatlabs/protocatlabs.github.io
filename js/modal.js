@@ -23,3 +23,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function revealText(elId) {
+  var x = document.getElementById(elId);
+  if (window.getComputedStyle(x, null).getPropertyValue('display') === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
