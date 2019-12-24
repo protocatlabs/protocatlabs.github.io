@@ -15,7 +15,7 @@ const staggersAnimation = anime.timeline({
   targets: '.stagger-visualizer div',
   easing: 'easeInOutSine',
   delay: anime.stagger(50),
-  loop: 2,
+  loop: 1,
   autoplay: false
 })
 .add({
