@@ -30,7 +30,7 @@
 
   <!-- JS
   	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  	
+  	<script type="text/javascript" src="js/anime.min.js"></script>
 
   <!-- Favicon
   	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -58,9 +58,12 @@
           <a class="f6 fw4 hover-white no-underline black-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> 
         </div> -->
       </nav> 
+      
       <div class="tc mt4 mt5-m mt6-l ph3">
+        <div class="stagger-visualizer center"></div>
+<script type="text/javascript" src="js/squares.js"></script>
         <h1 class="f2 f1-l fw2 mb0 lh-title">Protocat Labs</h1>
-        <h2 class="fw1 f3  mt3 mb4">Bringing your blue-sky ideas to functional prototypes</h2>
+        <h2 class="fw1 f3  mt3 mb4"></h2>
 <!--         <a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3" href="/">Request Quote</a>
         <span class="dib v-mid ph3 black-70 mb3"> - </span>
         <a class="f6 no-underline grow dib v-mid black ba b--black ph3 pv2 mb3" href="">Projects</a> -->
@@ -68,7 +71,8 @@
     </div>
   </div> 
 </header>
-
+</section>
+<section class="sans-serif bg-gray center"> 
 
 </section>
 
@@ -169,13 +173,13 @@
 </section>
 
 <section class="sans-serif white bg-dark-gray"> 
-  <div class="ph4 f2 f2-l fw2 mb3 mt4 mt0-ns pt3">Portfolio of Solutions 
+  <div class="ph4 f2 f2-l fw2 mb3 mt4 mt0-ns pt3">Portfolio 
   </div>
   <main class="cf pa2">
     <div class="fl w-100 w-50-ns ph2">
       <div class="pv2 grow db no-underline black" onclick="revealText('asfDiv')">
 
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you design and build a kinetic photovoltaic shading system?
+        <div class = "absolute bg-black-90 white w-100 pa3"> Can you design and build a kinetic photovoltaic shading system?
         <div class = "dn pt3" id="asfDiv" >
           A kinetic facade design and construction project for the HiLo building in Zurich. 
           <div class = "pt2">Client: ETH Zurich</div>
@@ -188,46 +192,89 @@
 
       <div class="no-underline pv2 grow db" onclick="revealText('aslDiv')">
 
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you conceptually design a world leading research facility?
+        <div class = "absolute bg-black-90 white w-100 pa3"> Can you conceptually design a world leading research facility?
           <div class = "dn pt3" id="aslDiv" >
           A conceptual design for a state of the art building research facility. Construction to start in 2020.
-          <div class = "pt2">Client: ETH Zurich</div>
+            <div class = "pt2">Client: ETH Zurich</div>
 
-        </div>
+          </div>
         </div>
         <img class="db w-100" src="img/ASL.png">
-
       </div>
-      <div class="no-underline pv2 grow db">
 
-        <div class = "absolute bg-black-80 white w-100 pa3"> It will take us a month to manually process 10'000 biomedical images</div>
+      <div class="no-underline pv2 grow db" onclick="revealText('bioDiv')">
+
+        <div class = "absolute bg-black-90 white w-100 pa3"> It will take us a month to manually process 10'000 biomedical images
+          <div class = "dn pt3" id="bioDiv" >
+          We used computer vision techniques to reduce a months worth of work, to just 15 minutes.
+            <div class = "pt2">Client: University Hospital Zurich</div>
+          </div>
+
+        </div>
         <img class="db w-100" src="img/BioCloud.png"/>
         </div>
+    </div>
+
+    <div class="fl w-100 w-25-ns ph2">
+      <div class="pv2 grow db no-underline black" onclick="revealText('cozieDiv')">
+         <div class = "absolute bg-black-90 white w-100 pa3"> Could a smart-watch be used for measuring human comfort?
+          <div class = "dn pt3" id="cozieDiv" >
+          An open source fitbit clock-face for conducting momentary assessments
+            <div class = "pt2">Client: Building and Urban Data Science Lab</div>
+            <div>Links: <a href="https://cozie.app/" target="_blank">Cozie Website</a></div>
+          </div>
+         </div>
+        <img class="db w-100" src="img/versa.png">
+      </div>
+
+      <div href="" class="pv2 grow db no-underline black" onclick="revealText('sunDiv')">
+        <div class = "absolute bg-black-90 white w-100 pa3"> Can you emulate the sun?
+        <div class = "dn pt3" id="sunDiv" >
+          Yes. It's really hard, and really expensive, and the final product is causing sever headaches, but yes.
+            <div class = "pt2">Client: ETH Zurich</div>
+          </div>
+        </div>
+        <img class="db w-100" src="img/SolarSimulator.jpg">
+      </div>
+
+      <div href="" class="pv2 grow db no-underline black" onclick="revealText('yakDiv')">
+        <div class = "absolute bg-black-90 white w-100 pa3"> How can you localise and track people indoors?
+        <div class = "dn pt3" id="yakDiv" >
+          We installed 100 bluetooth beacons from <a href="https://steerpath.com/" target ="_blank">Steerpath </a>, and developed an iOS app that can localise users, and send their location data to a cloud server. This can now be used for services such as fault detection, tracking user behaviour, or indoor navigation.
+            <div class = "pt2">Client: National University of Singapore</div>
+          </div>
+        </div>
+        <img class="db w-100" src="img/Yak_blank.png">
+      </div>
+
 
     </div>
 
     <div class="fl w-100 w-25-ns ph2">
-      <div class="pv2 grow db no-underline black">
-         <div class = "absolute bg-black-80 white w-100 pa3"> Could a smart-watch be used for measuring human comfort?</div>
-        <img class="db w-100" src="img/versa.png"></div>
-      <div href="" class="pv2 grow db no-underline black">
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you simulate the sun?</div>
-        <img class="db w-100" src="img/SolarSimulator.jpg"></div>
+      <div href="" class="pv2 grow db no-underline black" onclick="revealText('forgeDiv')">
 
-    </div>
-
-    <div class="fl w-100 w-25-ns ph2">
-      <div href="" class="pv2 grow db no-underline black">
-
-        <div class = "absolute bg-black-80 white w-100 pa3"> Can you represent our building IoT data in an interactive 3d web model?</div>
+        <div class = "absolute bg-black-90 white w-100 pa3"> Can you represent our building IoT data in an interactive 3d web model?
+          <div class = "dn pt3" id="forgeDiv" >
+          Using Autodesk Forge and three.js an interactive data driven visualisation of a building can be generated.
+            <div class = "pt2">Client: National Unviersity of Singapore</div>
+            <div>Links: <a href="https://sde4demo.herokuapp.com/" target="_blank">SDE4 Viewer</a></div>
+          </div>
+        </div>
 
         <img class="db w-100" src="img/forge_long.png">
 
       </div>
-      <div href="" class="pv2 grow db no-underline black">
-         <div class = "absolute bg-black-80 white w-100 pa3"> We need a high speed building simulation engine</div>
-        <img class="db w-100" src="img/RCModel.png"></div>
 
+      <div href="" class="pv2 grow db no-underline black" onclick="revealText('rcDiv')">
+         <div class = "absolute bg-black-90 white w-100 pa3"> We need a high speed building energy simulation engine
+         <div class = "dn pt3" id="rcDiv" >
+            A high speed physics model based on ISO 13790 was constructed in python for energy simulation. The high speed enables performance driven parametric design.
+            <div class = "pt2">Client: Open Source</div>
+            <div>Links: <a href="https://github.com/architecture-building-systems/RC_BuildingSimulator" target="_blank">Github Page</a></div>
+          </div>
+        </div>
+        <img class="db w-100" src="img/RCModel.png">
+      </div>
     </div>
 </main>
 
@@ -261,7 +308,7 @@
         <div class="w-100 w-60-ns pl3-ns">
           <h1 class="f3 fw1  mt0 lh-title">Why Innovation Needs Education</h1>
           <p class="f6 f5-l lh-copy">
-            Innovation is not just about building what has never been done before. It is also about providing education so that the innovation can be replicated.
+            Innovation is not just about building what has never been done before. It is also about educating the client so that the innovation can be replicated and further improved.
           </p>
           <p class="f6 lh-copy mv0">By Prageeth Jayathissa</p>
         </div>
