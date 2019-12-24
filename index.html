@@ -65,7 +65,7 @@
       </nav> 
       
       <div class="tc mt4 mt5-m mt6-l ph3">
-        <div class="stagger-visualizer center"></div>
+        <div class="stagger-visualizer center" onclick="staggersAnimation.play()"></div>
 <script type="text/javascript" src="js/squares.js"></script>
         <h1 class="f2 f1-l fw2 mb0 lh-title">Protocat Labs</h1>
         <h2 class="fw1 f3  mt3 mb4">Every tech projects favorite pet</h2>
@@ -101,12 +101,12 @@
       <legend class="f4 fw6 ph0 mh0 tl">Step 1: Fill out the form below</legend>
       <div class="measure mt3">
         <label for="question" class="f6 b db mb2 tl">Your Problem / Question <span class="normal black-60">See the examples below for inspiration</span></label>
-        <textarea name = "question" id="question" class="input-reset ba b--black-20 pa2 mb2 db w-100" placeholder = "Example: Is there a way to remotely monitor the mental health of my patients?"></textarea>
+        <textarea required name = "question" id="question" class="input-reset ba b--black-20 pa2 mb2 db w-100" placeholder = "Example: Is there a way to remotely monitor the mental health of my patients?"></textarea>
         <small id="question-desc" class="f6 black-60 db mb2"></small>
       </div>
       <div class="measure mt3">
         <label for="question" class="f6 b db mb2 tl">Long description of your problem <span class="normal black-60"></span></label>
-        <textarea name = "description" id="question" rows = "10" class="input-reset ba b--black-20 pa2 mb2 db w-100" placeholder = "Example: When our patients come in for therapy, they are often recollecting their past feelings which are not as accurate as their feelings at the time. We would like to develop a methodology, such as an app, which can allow our patients to give feedback multiple times per day."></textarea>
+        <textarea required name = "description" id="question" rows = "10" class="input-reset ba b--black-20 pa2 mb2 db w-100" placeholder = "Describe your problem in more detail. About 50 - 100 words"></textarea>
         <small id="question-desc" class="f6 black-60 db mb2"></small>
       </div>
       <div class="measure mt3 bn">
@@ -131,8 +131,15 @@
       </div>
 
       <div class="measure mt3">
+        <label for="email-address" class="f6 b db mb2 tl">Approximate Budget <span class="normal black-60">(optional)</span></label>
+        <input name ="email" id="email-address" class="input-reset ba b--black-20 pa2 mb2 db w-100"></input>
+        <small id="email-address-desc" class="f6 black-60 db mb2"></small>
+      </div>
+
+
+      <div class="measure mt3">
         <label for="email-address" class="f6 b db mb2 tl">Your email <span class="normal black-60"></span></label>
-        <input name ="email" id="email-address" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email" ></input>
+        <input name ="email" id="email-address" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email" required></input>
         <small id="email-address-desc" class="f6 black-60 db mb2"></small>
       </div>
 
